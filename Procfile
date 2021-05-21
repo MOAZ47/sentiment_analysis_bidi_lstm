@@ -1,1 +1,1 @@
-web: gunicorn app:sentiment_analysis_web_app.py
+web: gunicorn app:Anvil_web_app.ipynb
