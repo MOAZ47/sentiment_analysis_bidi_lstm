@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Deep Learning App with Flask
+		</div>
+		<h1 style ='border-bottom: 2px solid black'><center>Sentiment Analysis</center></h1>
+		
+	</div>
+	</header>
+        <div>
+            <p>
+               This web app based on deep learning is created with the intention to detect the sentiment of the text input provided by you. To find the predicted sentiment associated with your text, enter it in the empty box given below.
+            </p>
+        </div>
+	<div class="ml-container">
+
+	<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter your text below</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="6" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="Predict">
+		
+	</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
